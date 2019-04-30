@@ -39,11 +39,8 @@ label{
     font-family: Arial;
 }
 
-#txt{
+.txt{
     box-shadow: 2px 0px 5px #aaaaaa;
-}
-
-form #txt{
     font-size: 20px;
     width: 70%;
     border-radius: 10px;
@@ -69,4 +66,8 @@ form #buttons:hover{
 h1{
     font-family: Arial;
     color: white;
+}
+
+.redBackground{
+    background-color: red;
 }

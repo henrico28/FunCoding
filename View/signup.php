@@ -9,13 +9,13 @@
             <form style="margin-top:20%;">  
                 <a href="index.php"><img src="View/images/logo.png"></a> <br>
                 <label>Full name</label><br>
-                <input id="txt" type="text" name="fname" placeholder="Enter Full Name"> <br>
+                <input id="name" class = "txt" type="text" name="fname" placeholder="Enter Full Name" required> <br>
                 <label>Username</label> <br>
-                <input id="txt" type="text" name="uname" placeholder="Enter User Name"> <br>
+                <input id="username" class = "txt" type="text" name="uname" placeholder="Enter User Name" pattern=".{5,}" required title="5 characters minimum"> <br>
                 <label>Password</label> <br>
-                <input id="txt" type="password" name="pass" placeholder="Enter Password"> <br>
+                <input id="password" class = "txt" type="password" name="pass" placeholder="Enter Password" pattern=".{5,}" required title="5 characters minimum"> <br>
                 <label>Country</label> <br>
-                <input id="txt" type="text" name="negara" placeholder="Enter Country Name">
+                <input id="country" class = "txt" type="text" name="negara" placeholder="Enter Country Name" required>
                 <br><br>
                 <input id="buttons" type="submit" value="Register"> <br>
                 <hr>
