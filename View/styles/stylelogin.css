@@ -1,0 +1,72 @@
+/*halaman login*/
+.flex-body{
+    justify-content: center;
+    display:flex;
+}
+.flex-body div{
+    text-align: center;
+    width:30%;
+}
+form{
+    margin-top: 30%;
+    box-shadow: 2px 0px 5px black;
+    background-color: white;
+}
+body{
+    background-color: #ba0101;
+}
+hr{
+    width: 75%;
+}
+
+/* halaman register*/
+.flex-register{
+    display:flex;
+    justify-content: center;
+}
+.flex-register div{
+    text-align: center;
+    width: 30%;
+}
+.flex-register div input{
+    text-align: center;
+}
+
+
+/*both*/
+label{
+    font-size:20px;
+    font-family: Arial;
+}
+
+#txt{
+    box-shadow: 2px 0px 5px #aaaaaa;
+}
+
+form #txt{
+    font-size: 20px;
+    width: 70%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+form #buttons{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 100px;
+}
+
+form #buttons:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
+}
+
+h1{
+    font-family: Arial;
+    color: white;
+}

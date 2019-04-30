@@ -1,0 +1,48 @@
+.flex-head{
+    display: flex;
+}
+
+.flex-right{
+    display: flex;
+    position: absolute;
+    flex-flow: column;
+    right: 10;
+    top: 0;
+    margin-top: -10px;
+}
+
+#logo{
+    width: 75%;
+    margin-top: -40px;
+}
+
+#logout{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 100px;
+    margin-top: -10px;
+    margin-left: 40%;
+}
+
+#logout:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
+}
+
+#user{
+    font-size: 20px;
+}
+
+#inner-user{
+    color:#ba0101;
+}
+
+#horizontal-top{
+    margin-top: -20px;
+    box-shadow: 2px 0px 3px #aaaaaa;
+}
