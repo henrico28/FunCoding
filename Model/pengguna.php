@@ -3,7 +3,7 @@
 class Pengguna{
     public $Username;
     public $Password;
-    public $Alamat;
+    public $NamaPengguna;
     public $Negara;
     public $Email;
     public $IdPosisi;
@@ -11,7 +11,7 @@ class Pengguna{
     public function __construct($a,$b,$c,$d,$e,$f){
         $this->Username = $a;
         $this->Password = $b;
-        $this->Alamat = $c;
+        $this->NamaPengguna = $c;
         $this->Negara = $d;
         $this->Email = $e;
         $this->IdPosisi = $f;
