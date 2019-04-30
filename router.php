@@ -34,7 +34,12 @@
                 require_once "Controller/loginController.php";
                 $log = new LoginController();
                 echo $log->check();
-                break;
+				break;
+			case $baseURL."/adduser":
+				require_once "Controller/signupController.php";
+				$add = new SignupController();
+				echo $add->register();
+				break;
 			default:
 				echo '404 not found';
 				break;

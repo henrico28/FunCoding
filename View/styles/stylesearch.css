@@ -1,0 +1,45 @@
+.flex-search{
+    display: flex;
+    justify-content: center;
+    flex-flow:column;
+    margin-top: 20%;
+}
+
+.flex-search h1{
+    color: #ba0101;
+    text-align: center;
+}
+
+.container-form-search{
+    display: flex;
+    justify-content: center;
+}
+
+form .attemptBtn{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 100px;
+}
+
+form .attemptBtn:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
+}
+
+form .ddlSearch{
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.containerSearch{
+    margin-left: 10px;
+    margin-right: 10px;
+}

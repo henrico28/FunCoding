@@ -6,7 +6,7 @@
     <div class="flex-register">
         <div>
             <h1>Create Your Account</h1>
-            <form style="margin-top:20%;">  
+            <form style="margin-top:20%;" method="POST" action="adduser">  
                 <a href="index.php"><img src="View/images/logo.png"></a> <br>
                 <label>Full name</label><br>
                 <input id="name" class = "txt" type="text" name="fname" placeholder="Enter Full Name" required> <br>

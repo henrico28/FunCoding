@@ -18,7 +18,7 @@
 			$pw = $_POST['pass'];
 			$name = $_POST['fname'];
 			$negara = $_POST['negara'];
-			$email = $_POST['Email'];
+			$email = $_POST['email'];
 			if(isset($user) && $user != ""){
 				$tempuser = $this->db->escapeString($user);
 				$temppw = $this->db->escapeString($pw);
@@ -26,8 +26,12 @@
 				$tempnegara = $this->db->escapeString($negara);
 				$tempemail = $this->db->escapeString($email);
 				$hashedPass = md5($temppw);
-				$query = "INSERT INTO pengguna (Username,Password,NamaPengguna,Negara,Email) VALUES ('$tempuser','$hashedPass','$tempname','$tempnegara','$tempemail')";
+				$query = "INSERT INTO pengguna (Username,Pass,NamaPengguna,Negara,Email,IdPosisi) VALUES ('$tempuser','$hashedPass','$tempname','$tempnegara','$tempemail',3)";
 				$this->db->executeNonSelectQuery($query);
+				header('Location: homepage ');
+			}
+			else{
+				print_r("enter");
 			}
 		}
 	}
