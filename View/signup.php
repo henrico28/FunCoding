@@ -12,6 +12,7 @@
                 <input id="name" class = "txt" type="text" name="fname" placeholder="Enter Full Name" required> <br>
                 <label>Username</label> <br>
                 <input id="username" class = "txt" type="text" name="uname" placeholder="Enter User Name" pattern=".{5,}" required title="5 characters minimum"> <br>
+                <span id="userauth"></span><br>
                 <label>Password</label> <br>
                 <input id="password" class = "txt" type="password" name="pass" placeholder="Enter Password" pattern=".{5,}" required title="5 characters minimum"> <br>
                 <label>Country</label> <br>
@@ -24,5 +25,6 @@
             </form>
         </div>
     </div>
+    <script src="View/Script/scriptajax.js"></script>
 </body>
 </html>
