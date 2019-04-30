@@ -14,20 +14,18 @@
 		}
 
 		public function register(){
-			$user = $_POST['Username'];
-			$pw = $_POST['Password'];
-			$name = $_POST['NamaPengguna'];
-			$negara = $_POST['Negara'];
+			$user = $_POST['uname'];
+			$pw = $_POST['pass'];
+			$name = $_POST['fname'];
+			$negara = $_POST['negara'];
 			$email = $_POST['Email'];
-			$idPosisi = $_POST['IdPosisi'];
 			if(isset($user) && $user != ""){
 				$tempuser = $this->db->escapeString($user);
 				$temppw = $this->db->escapeString($pw);
 				$tempname = $this->db->escapeString($name);
 				$tempnegara = $this->db->escapeString($negara);
 				$tempemail = $this->db->escapeString($email);
-				$tempidposisi = $this->db->escapeString($idPosisi);
-				$query = "INSERT INTO pengguna (Username,Password,NamaPengguna,Negara,Email,IdPosisi) VALUES ('$tempuser','$temppw','$tempname','$tempnegara','$tempemail','$tempidposisi')";
+				$query = "INSERT INTO pengguna (Username,Password,NamaPengguna,Negara,Email) VALUES ('$tempuser','$temppw','$tempname','$tempnegara','$tempemail')";
 				$this->db->executeNonSelectQuery($query);
 			}
 		}

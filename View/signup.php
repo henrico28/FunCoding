@@ -16,7 +16,9 @@
                 <label>Password</label> <br>
                 <input id="password" class = "txt" type="password" name="pass" placeholder="Enter Password" pattern=".{5,}" required title="5 characters minimum"> <br>
                 <label>Country</label> <br>
-                <input id="country" class = "txt" type="text" name="negara" placeholder="Enter Country Name" required>
+                <input id="country" class = "txt" type="text" name="negara" placeholder="Enter Country Name" required><br>
+                <label>Email</label> <br>
+                <input id="email" class = "txt" type="text" name="email" placeholder="Enter Email" required>
                 <br><br>
                 <input id="buttons" type="submit" value="Register"> <br>
                 <hr>
