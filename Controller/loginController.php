@@ -12,11 +12,8 @@
 		}
 
 		public function check(){
-			$uname = $_POST['username'];
+			$uname = $_POST['uname'];
 			$pass = $_POST['pass'];
-			session_start();
-			$_SESSION['username'] = $uname;
-			session_write_close();
 			$query="SELECT `idPosisi`,`NamaPengguna`, `Username` FROM `pengguna` WHERE `Username`=";
 			if(isset($uname) && $uname!=""){
 				$uname = $this->db->escapeString($uname);
