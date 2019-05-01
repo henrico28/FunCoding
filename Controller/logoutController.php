@@ -13,6 +13,7 @@
 			unset($_SESSION['username']);
 			unset($_SESSION['bahasa']);
 			unset($_SESSION['level']);
+			unset($_SESSION['role']);
             session_destroy();
             session_write_close();
             header('Location: frontpage');

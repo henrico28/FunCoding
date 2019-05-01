@@ -26,6 +26,13 @@
 			}
 			$res = $this->db->executeSelectQuery($query);
 			if(count($res)!=0){
+				session_start();
+					$_SESSION['userlogin'] = $res[0][1];
+					$_SESSION['bahasa'] = $resBahasa;
+					$_SESSION['level'] = $resLevel;
+					$_SESSION['username'] = $res[0][2];
+					$_SESSION['role']=$res[0][0];
+					session_write_close();
 				if($res[0][0]==1){
 					header('');
 					print_r("enter");
@@ -41,12 +48,6 @@
 					$qLevel = "SELECT `NamaLevel` FROM `level`";
 					$resBahasa = $this->db->executeSelectQuery($qBahasa);
 					$resLevel = $this->db->executeSelectQuery($qLevel);
-					session_start();
-					$_SESSION['userlogin'] = $res[0][1];
-					$_SESSION['bahasa'] = $resBahasa;
-					$_SESSION['level'] = $resLevel;
-					$_SESSION['username'] = $res[0][2];
-					session_write_close();
 					header('Location: homepage');
 				}
 			}

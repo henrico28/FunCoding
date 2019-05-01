@@ -12,12 +12,24 @@
 			$nama = $_SESSION['userlogin'];
 			$bahasa = $_SESSION['bahasa'];
 			$level = $_SESSION['level'];
-            session_write_close();
-            return View::createView('homeuser.php',[
-				"nama"=> $nama,
-				"bahasa"=> $bahasa,
-				"level"=> $level
-            ]);
+			$role = $_SESSION['role'];
+			session_write_close();
+			if($role==3){
+				return View::createView('homeuser.php',[
+					"nama"=> $nama,
+					"bahasa"=> $bahasa,
+					"level"=> $level
+				]);
+			}
+			else if($role==2){
+				header('Location: manager');
+			}
+			else{
+				return View::createView('homepage-Admin.php',[
+					"nama"=> $nama
+				]);
+			}
+            
         }
 	}
 ?>
