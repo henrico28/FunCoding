@@ -47,6 +47,11 @@
 				$top10 = new Top10Controller();
 				echo $top10 -> start();
 				break;
+			case $baseURL."/statistik":
+				require_once "Controller/statistikController.php";
+				$statistik = new Statistik();
+				echo $statistik -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;

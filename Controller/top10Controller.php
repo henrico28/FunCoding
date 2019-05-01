@@ -13,10 +13,10 @@
             session_write_close();
 
             $top10 = "SELECT Pengguna.Username,Pengguna.NamaPengguna,COUNT(Pengguna.Username) AS 'Jumlah Sertifikat' FROM Sertifikat JOIN Pengguna ON Sertifikat.Username = Pengguna.Username GROUP BY Username ORDER BY 'Jumlah Sertifikat' DESC";
-            $res2 = $this->db->executeSelectQuery($top10);
+            $res = $this->db->executeSelectQuery($top10);
             return View::createView('hal_top10-manajer.php',[
                 "nama" => $nama,
-                "top10" => $res2
+                "top10" => $res
             ]);
         }
 	}
