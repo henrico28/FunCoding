@@ -12,7 +12,7 @@
 			$nama = $_SESSION['userlogin'];
             session_write_close();
 
-            $data="SELECT NamaPengguna,Negara,Email FROM pengguna";
+            $data="SELECT NamaPengguna,Negara,Email FROM pengguna WHERE IdPosisi = 3";
             $res = $this->db->executeSelectQuery($data);
 
             return View::createView('hal_pengguna-manajer.php',[
