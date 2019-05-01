@@ -28,7 +28,7 @@
 				$hashedPass = md5($temppw);
 				$query = "INSERT INTO pengguna (Username,Pass,NamaPengguna,Negara,Email,IdPosisi) VALUES ('$tempuser','$hashedPass','$tempname','$tempnegara','$tempemail',3)";
 				$this->db->executeNonSelectQuery($query);
-				header('Location: homepage ');
+				header('Location: login ');
 			}
 			else{
 				print_r("enter");

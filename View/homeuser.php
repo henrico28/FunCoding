@@ -1,8 +1,4 @@
-<html>
-    <head>
-    <link rel="stylesheet" href="styles/stylesearch.css">
-    </head>
-    <body>
+
         <div class="flex-search">
             <div>
                 <h1>Choose Language & Level</h1>
@@ -35,5 +31,3 @@
                 <div class="containerSearch"><input class="attemptBtn" type=submit value="Attempt"/></div>
             </form>
         </div>
-    </body>
-</html>

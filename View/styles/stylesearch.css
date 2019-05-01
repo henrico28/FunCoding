@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     flex-flow:column;
-    margin-top: 20%;
+    margin-top: 15%;
 }
 
 .flex-search h1{

@@ -22,7 +22,7 @@
 			if(isset($pass) && $pass!=""){
 				$pass = $this->db->escapeString($pass);
 				$hashedPassword = md5($pass);
-				$query.="`Password`='$hashedPassword'";
+				$query.="`Pass`='$hashedPassword'";
 			}
 			$res = $this->db->executeSelectQuery($query);
 			if(count($res)!=0){

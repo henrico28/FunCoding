@@ -11,7 +11,7 @@
             session_start();
             $nama = $_SESSION['userlogin'];
             session_write_close();
-            return View::createView('home.php',[
+            return View::createView('homeuser.php',[
                 "nama"=> $nama
             ]);
         }
