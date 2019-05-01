@@ -2,28 +2,38 @@
     justify-content: center;
     display:flex;
     margin: 20px;
+    
 }
 .flex-profile div{
     width:30%;
     box-shadow: 2px 0px 5px black;
     background-color: white;
     padding: 10px;
+    background-color: #ba0101;
+    color: white;
+    font-weight: bold;
 }
 .flex-profile div h1{
     text-align: center;
+    color:white;
 }
 
 .flex-history{
     justify-content: center;
     display:flex;
     margin:20px;
+    
 }
 .flex-history div{
     width:30%;
     box-shadow: 2px 0px 5px black;
     background-color: white;
     padding: 10px;
+    background-color: #ba0101;
+    color: white;
+    font-weight: bold;
 }
 .flex-history div h1{
     text-align: center;
+    color:white;
 }
