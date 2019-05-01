@@ -11,13 +11,13 @@
             session_start();
             $user = $_SESSION['userlogin'];
             session_write_close();
-            $query="SELECT `*` FROM `pengguna` WHERE `Username`=$user";
+            $query="SELECT NamaPengguna,Username,Negara,Email FROM pengguna WHERE NamaPengguna = '$user'";
             $res = $this->db->executeSelectQuery($query);
             return View::createView('profile.php',[
-                "nama" => $res[0][2]
-                "user" => $res[0][0]
-                "negara" => $res[0][3]
-                "email" => $res[0][4]
+                "nama" => $res[0][0],
+                "user" => $res[0][1],
+                "negara" => $res[0][2],
+                "email" => $res[0][3]
             ]);
         }
     }
