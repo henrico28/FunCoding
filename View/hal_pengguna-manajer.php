@@ -1,8 +1,4 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="styles/stylehalpenggunatop10.css">
-    </head>
-    <body>
+
         <div class="flex-body">
             <div>
                 <h1>Pengguna</h1>
@@ -26,5 +22,3 @@
                 </table>
             <div>
         </div>
-    </body>
-</html>

@@ -32,6 +32,16 @@
 				require_once "Controller/logoutController.php";
 				$logout = new LogoutController();
 				echo $logout ->logout();
+			case $baseURL."/manager":
+				require_once "Controller/managerController.php";
+				$manager = new ManagerController();
+				echo $manager -> start();
+				break;
+			case $baseURL."/pengguna-manajer":
+				require_once "Controller/pengguna-manajer.php";
+				$penggunaManajer = new PenggunaManajer();
+				echo $penggunaManajer -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;

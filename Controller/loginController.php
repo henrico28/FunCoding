@@ -31,8 +31,10 @@
 					print_r("enter");
 				}
 				else if($res[0][0]==2){
-					header('');
-					print_r("enter");
+					session_start();
+					$_SESSION['userlogin'] = $res[0][1];
+					session_write_close();
+					header('Location: manager');
 				}
 				else if($res[0][0]==3){
 					$qBahasa = "SELECT `NamaBahasa` FROM `bahasa`";
