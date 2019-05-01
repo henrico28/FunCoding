@@ -23,8 +23,11 @@
 				$homepage = new HomepageController();
 				echo $homepage -> start();
 				break;
-			//case $baseURL."/profile":
-
+			case $baseURL."/profile":
+				require_once "Controller/profileController.php";
+				$profile = new ProfileController();
+				echo $profile -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;

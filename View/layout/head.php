@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="View/styles/stylehead.css">
     <link rel='stylesheet' href="View/styles/stylesearch.css">
+    <link rel="stylesheet" href="styles/styleprofile.css">
 </head>
 <body id="bground">
     <div class="flex-head">
