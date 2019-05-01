@@ -9,7 +9,8 @@
 
 		public function start(){
             $bahasa = $_POST['uname'];
-			$level = $_POST['pass'];
+            $level = $_POST['pass'];
+            $query = "SELECT ";
             return View::createView('halujian.php',[
 				"nama"=> $nama,
 				"bahasa"=> $bahasa,
