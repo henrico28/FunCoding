@@ -1,0 +1,17 @@
+.flex-haluji{
+    display:flex;
+    justify-content: center;
+}
+.flex-haluji div{
+    width: 40%;
+    height: 10px;
+}
+
+form{
+    margin-top: 30%;
+    box-shadow: 2px 0px 5px black;
+    background-color: white;
+    height: 3500%;
+    overflow: auto;
+    padding: 10px;
+}
