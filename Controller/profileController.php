@@ -9,11 +9,10 @@
         
         public function start(){
             session_start();
-            $user = $_SESSION['username'];
-            echo $_SESSION['username'];
+            $username = $_SESSION['username'];
             session_write_close();
-            
-            $query="SELECT NamaPengguna,Username,Negara,Email FROM pengguna WHERE Username = '$user'";
+            echo $username;
+            $query="SELECT NamaPengguna,Username,Negara,Email FROM pengguna WHERE Username = '$username'";
             $res = $this->db->executeSelectQuery($query);
             return View::createView('profile.php',[
                 "nama" => $res[0][0],

@@ -28,6 +28,10 @@
 				$profile = new ProfileController();
 				echo $profile -> start();
 				break;
+			case $baseURL."/logout":
+				require_once "Controller/logoutController.php";
+				$logout = new LogoutController();
+				echo $logout ->logout();
 			default:
 				echo '404 not found';
 				break;
