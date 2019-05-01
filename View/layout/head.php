@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="View/styles/styleprofile.css">
     <link rel="stylesheet" href="View/styles/stylemanager.css">
     <link rel="stylesheet" href="View/styles/stylehalpenggunatop10.css">
+    <link rel = "stylesheet" href = "styles/stylestatistik.css">
 
 </head>
 <body id="bground">

@@ -10,6 +10,6 @@
             </div>
             <div>
                 <img class="imgManager" src = "View/images/statistik.svg"><br>
-                <a href = ""><label class="descManager">Statistik</label></a> 
+                <a href = "statistik"><label class="descManager">Statistik</label></a> 
             </div>
         </div>
