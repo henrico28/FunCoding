@@ -7,11 +7,11 @@
             <div>
                 <h1>Profile</h1>
                 <hr>
-                Nama lengkap: <br>
-                Username: <br>
-                Password: <br>
-                Asal negara: <br>
-                email: <br>
+                <p>Nama lengkap: <?=$nama?></p><br>
+                <p>Username: <?=$user?></p><br>
+                <p>Password: <?=$pass?></p><br>
+                <p>Asal negara: <?=$negara?></p><br>
+                <p>email: <?=$email?></p><br>
             </div>
         </div>
         <div class="flex-history">
