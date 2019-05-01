@@ -7,7 +7,7 @@
 <body id="bground">
     <div class="flex-head">
         <div class="flext-left">
-            <img id="logo" src="View/images/logo.png">
+            <a href="homepage"><img id="logo" src="View/images/logo.png"></a>
         </div>
         <div class="flex-right">
             <div id="user"><p>Hai, <a id="inner-user" href="profile"><?=$nama?></a></p></div>

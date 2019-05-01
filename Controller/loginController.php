@@ -38,8 +38,14 @@
 					print_r("enter");
 				}
 				else if($res[0][0]==3){
+					$qBahasa = "SELECT `NamaBahasa` FROM `bahasa`";
+					$qLevel = "SELECT `NamaLevel` FROM `level`";
+					$resBahasa = $this->db->executeSelectQuery($qBahasa);
+					$resLevel = $this->db->executeSelectQuery($qLevel);
 					session_start();
 					$_SESSION['userlogin'] = $res[0][1];
+					$_SESSION['bahasa'] = $resBahasa;
+					$_SESSION['level'] = $resLevel;
 					session_write_close();
 					header('Location: homepage');
 				}

@@ -45,3 +45,7 @@
     margin-top: -20px;
     box-shadow: 2px 0px 3px #aaaaaa;
 }
+
+.flex-right a{
+    text-decoration: none;
+}
