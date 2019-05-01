@@ -6,7 +6,7 @@
                 <p>Nama lengkap: <?=$nama?></p><br>
                 <p>Username: <?=$user?></p><br>
                 <p>Asal negara: <?=$negara?></p><br>
-                <p>email: <?=$email?></p><br>
+                <p>Email: <?=$email?></p><br>
             </div>
         </div>
         <div class="flex-history">
