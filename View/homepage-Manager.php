@@ -6,7 +6,7 @@
             </div>
             <div>
                <img class="imgManager" src = "View/images/top10.svg"><br>
-               <a href = ""><label class="descManager">Top 10 User</label></a>
+               <a href = "penggunaManajer"><label class="descManager">Top 10 User</label></a>
             </div>
             <div>
                 <img class="imgManager" src = "View/images/statistik.svg"><br>
