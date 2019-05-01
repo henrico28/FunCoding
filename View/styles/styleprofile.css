@@ -32,8 +32,23 @@
     background-color: #ba0101;
     color: white;
     font-weight: bold;
+    text-align: center;
 }
 .flex-history div h1{
     text-align: center;
     color:white;
+}
+
+.flex-history table, tr, td{
+    color:black;
+    font-weight: bold;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color:white;
+    text-align: center;
+    padding: 5px;
+}
+
+.historyUjian{
+    /* justify-content: center; */
 }

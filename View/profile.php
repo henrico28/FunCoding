@@ -13,7 +13,22 @@
             <div>
                 <h1>History</h1>
                 <hr>
-                Java - Beginner - 80 <br>
-                Java - Beginner - 100 <br>
+                <!-- <div class = "historyUjian"> -->
+                <table>
+                    <?php
+                        $counter = 0;
+                        for ($x = 0; $x < sizeof($history); $x++) {
+                            echo"<tr>";
+                            echo "<td>".$history[$x][$counter]."</td>";
+                            $counter = $counter+1;
+                            echo "<td>".$history[$x][$counter]."</td>";
+                            $counter = $counter+1;
+                            echo "<td>".$history[$x][$counter]."</td>";
+                            $counter = 0;
+                            echo "</tr>";
+                        }
+                    ?>
+                </table>
+            <!-- </div> -->
             </div>
         </div>
