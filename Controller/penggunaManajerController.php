@@ -15,9 +15,12 @@
             $data="SELECT NamaPengguna,Negara,Email FROM pengguna WHERE IdPosisi = 3";
             $res = $this->db->executeSelectQuery($data);
 
+            $top10 = "SELECT Pengguna.Username,Pengguna.NamaPengguna,COUNT(Pengguna.Username) AS 'jumlahSertifikat' FROM Sertifikat JOIN Pengguna ON Sertifikat.Username = Pengguna.Username GROUP BY Username ORDER BY 'jumlahSertifikat' DESC";
+            $res2 = $this->db->executeSelectQuery($top10);
             return View::createView('hal_pengguna-manajer.php',[
                 "nama" => $nama,
-                "data" => $res
+                "data" => $res,
+                "top10" => $res2
             ]);
         }
 	}

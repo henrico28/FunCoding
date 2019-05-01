@@ -42,6 +42,11 @@
 				$penggunaManajer = new PenggunaManajerController();
 				echo $penggunaManajer -> start();
 				break;
+			case $baseURL."/top10":
+				require_once "Controller/top10Controller.php";
+				$top10 = new Top10Controller();
+				echo $top10 -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;
