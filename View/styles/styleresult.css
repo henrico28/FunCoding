@@ -1,0 +1,36 @@
+.flex-body{
+    justify-content: center;
+    display:flex;
+}
+.flex-body div{
+    width:30%;
+}
+.flex-body div h1{
+    text-align: center;
+}
+#box{
+    box-shadow: 2px 0px 5px black;
+    background-color: white;
+    padding: 10px;
+}
+body{
+    background-color: #ba0101;
+}
+#box #buttons{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+#box #buttons:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
+}
+a{
+	text-decoration: none;
+}
