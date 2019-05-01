@@ -8,12 +8,11 @@
 		}
 
 		public function logout(){   
-            session_start();
-            $_SESSION['userlogin']="";
-            $_SESSION['username']="";
-            $_SESSION['userlogin'] = "";
-			$_SESSION['bahasa'] = "";
-            $_SESSION['level'] = "";
+			session_start();
+			unset($_SESSION['userlogin']);
+			unset($_SESSION['username']);
+			unset($_SESSION['bahasa']);
+			unset($_SESSION['level']);
             session_destroy();
             session_write_close();
             header('Location: frontpage');
