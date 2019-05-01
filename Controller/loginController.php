@@ -42,11 +42,12 @@
 				}
 			}
 			else{
-			?>
-				<script>
-					alert("Invalid UserName or Password!");
+				?>
+				<script type="text/javascript">
+					alert("Wrong Username or Password");
 				</script>
-			<?php
+				<?php
+					return View::createView1('login.php', []);			
 			}
 
 		}
