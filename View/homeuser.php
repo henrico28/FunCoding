@@ -3,10 +3,10 @@
             <div>
                 <h1>Choose Language & Level</h1>
             </div>
-            <form class="container-form-search">
+            <form class="container-form-search" method = "POST" action = "search">
                 <div class="containerSearch">
-                    <select class="ddlSearch">
-                        <option>Choose Language</option>
+                    <select required class="ddlSearch">
+                        <option value = "">Choose Language</option>
                         <?php
                             foreach ($bahasa as $key => $value){
                                 echo "<option>";
@@ -17,8 +17,8 @@
                     </select>
                 </div>
                 <div class="containerSearch">
-                    <select class="ddlSearch">
-                        <option>Choose Level</option>
+                    <select required class="ddlSearch">
+                        <option value = "">Choose Level</option>
                         <?php
                             foreach ($level as $key => $value){
                                 echo "<option>";
