@@ -64,5 +64,4 @@
 				break;
 		}
 	}
-	// hello
 ?>
