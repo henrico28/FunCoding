@@ -9,8 +9,8 @@
             <img id="logo" src="View/images/logo.png">
         </div>
         <div class="flex-right">
-            <div id="user"><p>Hai, <a id="inner-user"><?=$nama?></a></p></div>
-            <div><input type="submit" value="Logout" id="logout"></div>
+            <div id="user"><p>Hai, <a id="inner-user" href="profile"><?=$nama?></a></p></div>
+            <div><a href="frontpage"><input type="submit" value="Logout" id="logout"></a></div>
         </div>
     </div>
-    <hr id="horizontal-top">
+    <hr id="horizntal-top">
