@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="View/styles/styleprofile.css">
+        <link rel="stylesheet" href="styles/styleprofile.css">
     </head>
     <body>
         <div class="flex-profile">

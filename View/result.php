@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="View/styles/styleresult.css">
+        <link rel="stylesheet" href="styles/styleresult.css">
     </head>
     <body>
         <div class="flex-body">
