@@ -6,7 +6,7 @@
             <form class="container-form-search" method = "POST" action = "search">
                 <div class="containerSearch">
                     <select required class="ddlSearch">
-                        <option value = "">Choose Language</option>
+                        <option value ="">Choose Language</option>
                         <?php
                             foreach ($bahasa as $key => $value){
                                 echo "<option>";
