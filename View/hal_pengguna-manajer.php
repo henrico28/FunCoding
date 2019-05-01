@@ -6,19 +6,21 @@
                     <tr>
                         <th>Nama Pengguna</th>
                         <th>Asal Negara</th>
+                        <th>Email</th>
                     </tr>
-                    <tr>
-                        <td>Yovan</td>
-                        <td>Indonesia</td>
-                    </tr>
-                    <tr>
-                        <td>Henrico</td>
-                        <td>India</td>
-                    </tr>
-                    <tr>
-                        <td>Harry</td>
-                        <td>China</td>
-                    </tr>
+                    <?php
+                        $counter = 0;
+                        for ($x = 0; $x < sizeof($data); $x++) {
+                            echo"<tr>";
+                            echo "<td>".$data[$x][$counter]."</td>";
+                            $counter = $counter+1;
+                            echo "<td>".$data[$x][$counter]."</td>";
+                            $counter = $counter+1;
+                            echo "<td>".$data[$x][$counter]."</td>";
+                            $counter = 0;
+                            echo "</tr>";
+                        }
+                    ?>
                 </table>
             <div>
         </div>

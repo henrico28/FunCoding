@@ -2,7 +2,7 @@
         <div class = "home-manager">
             <div>
                 <img class="imgManager" src = "View/images/pengguna.svg"><br>
-                <a href = ""><label class="descManager">Pengguna</label></a>             
+                <a href = "penggunaManajer"><label class="descManager">Pengguna</label></a>             
             </div>
             <div>
                <img class="imgManager" src = "View/images/top10.svg"><br>

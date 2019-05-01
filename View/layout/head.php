@@ -4,7 +4,7 @@
     <link rel='stylesheet' href="View/styles/stylesearch.css">
     <link rel="stylesheet" href="View/styles/styleprofile.css">
     <link rel="stylesheet" href="View/styles/stylemanager.css">
-    <link rel="stylesheet" href="styles/stylehalpenggunatop10.css">
+    <link rel="stylesheet" href="View/styles/stylehalpenggunatop10.css">
 
 </head>
 <body id="bground">

@@ -4,13 +4,11 @@ table, th, td {
     background-color:white;
     text-align:center;
 }
-body{
-    background-color:#ba0101;
-}
+
 .flex-body{
     justify-content: center;
     display:flex;
-    
+    background-color: white;
 }
 .flex-body div{
     text-align:center;

@@ -37,9 +37,9 @@
 				$manager = new ManagerController();
 				echo $manager -> start();
 				break;
-			case $baseURL."/pengguna-manajer":
-				require_once "Controller/pengguna-manajer.php";
-				$penggunaManajer = new PenggunaManajer();
+			case $baseURL."/penggunaManajer":
+				require_once "Controller/penggunaManajerController.php";
+				$penggunaManajer = new PenggunaManajerController();
 				echo $penggunaManajer -> start();
 				break;
 			default:
