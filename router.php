@@ -23,6 +23,8 @@
 				$homepage = new HomepageController();
 				echo $homepage -> start();
 				break;
+			//case $baseURL."/profile":
+
 			default:
 				echo '404 not found';
 				break;
