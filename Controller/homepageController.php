@@ -9,10 +9,14 @@
 
 		public function start(){
             session_start();
-            $nama = $_SESSION['userlogin'];
+			$nama = $_SESSION['userlogin'];
+			$bahasa = $_SESSION['bahasa'];
+			$level = $_SESSION['level'];
             session_write_close();
             return View::createView('homeuser.php',[
-                "nama"=> $nama
+				"nama"=> $nama,
+				"bahasa"=> $bahasa,
+				"level"=> $level
             ]);
         }
 	}
