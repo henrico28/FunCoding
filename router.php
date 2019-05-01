@@ -69,5 +69,4 @@
 				break;
 		}
 	}
-	// hello
 ?>
