@@ -62,6 +62,11 @@
 				$penggunaAdmin = new PenggunaAdminController();
 				echo $penggunaAdmin -> start();
 				break;
+			case $baseURL."/result":
+				require_once "Controller/ujianController.php";
+				$result = new ResultController();
+				echo $result -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;
