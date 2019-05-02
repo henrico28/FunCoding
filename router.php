@@ -52,6 +52,11 @@
 				$statistik = new Statistik();
 				echo $statistik -> start();
 				break;
+			case $baseURL."/admin":
+				require_once "Controller/adminController.php";
+				$admin = new AdminController();
+				echo $admin -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;

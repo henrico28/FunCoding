@@ -32,8 +32,10 @@
 					$_SESSION['role']=$res[0][0];
 				session_write_close();
 				if($res[0][0]==1){
-					header('');
-					print_r("enter");
+					session_start();
+					$_SESSION['userlogin'] = $res[0][1];
+					session_write_close();
+					header('Location: admin');
 				}
 				else if($res[0][0]==2){
 					session_start();
