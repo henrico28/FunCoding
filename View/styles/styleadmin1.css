@@ -1,24 +1,22 @@
-body{
-    background-color: #BA0101;
-    display: inline;
-}
-
-img{
-    width : 10%;
-    height : 10%;
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color:white;
+    text-align:center;
 }
 
 .home{
     justify-content: center;
-    display: flex;
+    display:flex;
+    background-color: white;
 }
-
 .home div{
     align-items: center;
     box-shadow: 2px 0px 5px #aaaaaa;
     background-color: white;
     text-align: center;
-    width: 30%;
+    width: 50%;
     margin:22px;
+    font-size: 200%;
     padding: 20px;
 }

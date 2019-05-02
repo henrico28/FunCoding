@@ -25,9 +25,7 @@
 				header('Location: manager');
 			}
 			else{
-				return View::createView('homepage-Admin.php',[
-					"nama"=> $nama
-				]);
+				header('Location: admin');
 			}
             
         }

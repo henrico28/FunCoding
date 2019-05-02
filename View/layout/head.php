@@ -8,6 +8,7 @@
     <link rel = "stylesheet" href = "styles/stylestatistik.css">
     <link rel = "stylesheet" href = "View/styles/styleshalujian.css">
     <link rel = "stylesheet" href = "View/styles/styleadmin.css">
+    <link rel = "stylesheet" href = "styles/styleadmin1.css">
     <script src="View/script/scriptfoto.js" defer></script>
 
 </head>

@@ -57,6 +57,11 @@
 				$admin = new AdminController();
 				echo $admin -> start();
 				break;
+			case $baseURL."/penggunaAdmin":
+				require_once "Controller/penggunaAdminController.php";
+				$penggunaAdmin = new PenggunaAdminController();
+				echo $penggunaAdmin -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;
@@ -89,6 +94,11 @@
 				require_once "Controller/searchController.php";
 				$search = new SearchController();
 				echo $search->search();
+				break;
+			case $baseURL."/adduseradmin":
+				require_once "Controller/AdduserController.php";
+				$add = new AdduserController();
+				echo $add->register();
 				break;
 			default:
 				echo '404 not found';
