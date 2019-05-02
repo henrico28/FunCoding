@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 01 Bulan Mei 2019 pada 11.17
+-- Waktu pembuatan: 02 Bulan Mei 2019 pada 14.53
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.3
 
@@ -44,19 +44,19 @@ INSERT INTO `bahasa` (`IdBahasa`, `NamaBahasa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `level`
+-- Struktur dari tabel `lvl`
 --
 
-CREATE TABLE `level` (
+CREATE TABLE `lvl` (
   `IdLevel` int(11) NOT NULL,
   `NamaLevel` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `level`
+-- Dumping data untuk tabel `lvl`
 --
 
-INSERT INTO `level` (`IdLevel`, `NamaLevel`) VALUES
+INSERT INTO `lvl` (`IdLevel`, `NamaLevel`) VALUES
 (1, 'Beginner'),
 (2, 'Intermediate'),
 (3, 'Advanced');
@@ -78,7 +78,8 @@ CREATE TABLE `mastersoal` (
 --
 
 INSERT INTO `mastersoal` (`IdMasterSoal`, `IdBahasa`, `IdLevel`) VALUES
-(1, 2, 1);
+(1, 2, 1),
+(2, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -100,7 +101,7 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`Username`, `Pass`, `NamaPengguna`, `Negara`, `Email`, `IdPosisi`) VALUES
-('harry', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Korea', 'harry@yahoo.com', 3),
+('harry', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Korea', 'harry@yahoo.com', 2),
 ('harry2', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Indonesia', 'harxsenjaya@yahoo.com', 3),
 ('Henrico', '25d55ad283aa400af464c76d713c07ad', 'Henrico Leodra', 'Indonesia', '', 3),
 ('yovan', 'e10adc3949ba59abbe56e057f20f883e', 'Yovan Yovan', 'Indonesia', 'leodra28@gmail.com', 3);
@@ -154,6 +155,16 @@ CREATE TABLE `soal` (
   `IdMasterSoal` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `soal`
+--
+
+INSERT INTO `soal` (`IdSoal`, `Soal`, `A`, `B`, `C`, `D`, `JawabanSoal`, `IdMasterSoal`) VALUES
+(1, '#**# merupakan karakter yang terdapat pada type data', 'text', 'password', 'radio', 'submit', 'password', 1),
+(2, 'Perintah untuk mengosongkan kolom pada HTML adalah', 'tr', 'br', 'td', '&nbsp', '&nbsp', 1),
+(3, 'Perintah untuk mengganti baris pada HTML adalah', 'br', 'tr', 'p', 'td', 'br', 1),
+(4, 'Type yang berfungsi untuk menerima masukan berupa teks dari pengguna adalah', 'Checkbox', 'Submit', 'File', 'Text', 'Text', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -172,7 +183,10 @@ CREATE TABLE `ujian` (
 --
 
 INSERT INTO `ujian` (`IdUjian`, `Username`, `IdMasterSoal`, `Skor`) VALUES
-(1, 'harry', 1, 75);
+(1, 'harry', 1, 75),
+(2, 'harry', 2, 80),
+(3, 'yovan', 1, 60),
+(4, 'yovan', 2, 60);
 
 -- --------------------------------------------------------
 
@@ -208,9 +222,9 @@ ALTER TABLE `bahasa`
   ADD PRIMARY KEY (`IdBahasa`);
 
 --
--- Indeks untuk tabel `level`
+-- Indeks untuk tabel `lvl`
 --
-ALTER TABLE `level`
+ALTER TABLE `lvl`
   ADD PRIMARY KEY (`IdLevel`);
 
 --
@@ -278,19 +292,19 @@ ALTER TABLE `ujian-soal`
 -- AUTO_INCREMENT untuk tabel `bahasa`
 --
 ALTER TABLE `bahasa`
-  MODIFY `IdBahasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `IdBahasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `level`
+-- AUTO_INCREMENT untuk tabel `lvl`
 --
-ALTER TABLE `level`
+ALTER TABLE `lvl`
   MODIFY `IdLevel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `mastersoal`
 --
 ALTER TABLE `mastersoal`
-  MODIFY `IdMasterSoal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IdMasterSoal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `posisi`
@@ -308,13 +322,13 @@ ALTER TABLE `sertifikat`
 -- AUTO_INCREMENT untuk tabel `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `IdSoal` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdSoal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `ujian`
 --
 ALTER TABLE `ujian`
-  MODIFY `IdUjian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IdUjian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -325,7 +339,7 @@ ALTER TABLE `ujian`
 --
 ALTER TABLE `mastersoal`
   ADD CONSTRAINT `FK-Master_Bahasa` FOREIGN KEY (`IdBahasa`) REFERENCES `bahasa` (`IdBahasa`),
-  ADD CONSTRAINT `FK-Master_Level` FOREIGN KEY (`IdLevel`) REFERENCES `level` (`IdLevel`);
+  ADD CONSTRAINT `FK-Master_Level` FOREIGN KEY (`IdLevel`) REFERENCES `lvl` (`IdLevel`);
 
 --
 -- Ketidakleluasaan untuk tabel `pengguna`
