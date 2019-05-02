@@ -8,7 +8,7 @@
 }
 
 .flex-haluji form{
-    margin-top: 10%;
+    margin-top: 5%;
     box-shadow: 2px 0px 5px black;
     background-color: white;
     height: 3500%;
@@ -30,4 +30,16 @@
     color: #ba0101;
     background-color: white;
     border: 2px solid white;
+}
+
+
+#time {
+    font-size: 50px;
+    color: #ba0101;
+    text-align: center;
+}
+
+.timer-container{
+    display: flex;
+    justify-content: center;
 }

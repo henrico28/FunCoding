@@ -1,4 +1,6 @@
-
+<div class="timer-container">
+        <div id="timer-wrapper"><span id="time">20:00</span></div>
+        </div>
         <div class="flex-haluji">
             <div>           
                 <form>
@@ -31,3 +33,4 @@
                 </form>
             </div>
         </div>
+</div>
