@@ -9,7 +9,6 @@
     <link rel = "stylesheet" href = "View/styles/styleshalujian.css">
     <link rel = "stylesheet" href = "View/styles/styleadmin.css">
     <script src="View/script/scriptfoto.js" defer></script>
-    <script src="View/script/scripttimer.js" defer></script>
 
 </head>
 <body id="bground">
