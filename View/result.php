@@ -12,7 +12,7 @@
                 Level: <?=$level?><br>
                 Score: <?=$score?><br>
                 <hr>
-                <a href=""><input id="buttons" type="button" value="Ok"></a>
+                <a href="homepage"><input id="buttons" type="button" value="Ok"></a>
                 <br> 
             </div>
         </div>

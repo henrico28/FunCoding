@@ -12,21 +12,26 @@
 			$bahasa = $_SESSION['bahasa'];
 			$level = $_SESSION['level'];
 			$nama = $_SESSION['userlogin'];
-			$soal = $_SESSION['ressoal'];
+			$res = $_SESSION['ressoal'];
 			session_write_close();
 			$count=0;
 			for($i=0;$i<4;$i++){
-				if($_POST[$i+1]==$soal[$i][5]){
+				if($_POST[$i+1]==$res[$i][5]){
 					$count=$count+1;
 				}
 			}
+			$qId = "SELECT IdMasterSoal FROM bahasa JOIN mastersoal ON mastersoal.IdBahasa = bahasa.IdBahasa JOIN lvl ON mastersoal.IdLevel = lvl.IdLevel WHERE bahasa.NamaBahasa = '$bahasa' AND lvl.NamaLevel = '$level'";
+			$idmastersoal = $this->db->executeSelectQuery($qId);
 			$score = ($count/4)*100;
+			$idms = $idmastersoal[0][0];
+			$query = "INSERT INTO ujian (Username,IdMasterSoal,Skor) VALUES ('$nama','$idms',$score)";
+			$this->db->executeNonSelectQuery($query);
             return View::createView('result.php',[
 				"nama"=> $nama,
 				"bahasa"=> $bahasa,
 				"level"=> $level,
-				"score"=> $score
-            ]);
+				"score"=> $score,
+			]);
 		}
 	}
 ?>
