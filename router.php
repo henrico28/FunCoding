@@ -57,10 +57,10 @@
 				$admin = new AdminController();
 				echo $admin -> start();
 				break;
-			case $baseURL."/penggunaAdmin":
-				require_once "Controller/penggunaAdminController.php";
-				$penggunaAdmin = new PenggunaAdminController();
-				echo $penggunaAdmin -> start();
+			case $baseURL."/result":
+				require_once "Controller/ujianController.php";
+				$result = new ResultController();
+				echo $result -> start();
 				break;
 			case $baseURL."/result":
 				require_once "Controller/ujianController.php";
