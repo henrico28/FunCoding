@@ -6,7 +6,7 @@ var x = setInterval(function() {
   var distance = countDownDate - now;
   var minutes = Math.floor((distance));
   document.getElementById("time").innerHTML = minutes + "m ";
-  if (distance < 0) {
+  if (distance <= 0) {
     clearInterval(x);
     location.assign("result");
   }
