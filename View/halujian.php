@@ -1,5 +1,5 @@
 <div class="timer-container">
-        <div id="timer-wrapper"><span id="time">20:00</span></div>
+        <div id="timer-wrapper"><span id="time"></span></div>
         </div>
         <div class="flex-haluji">
             <div>           
