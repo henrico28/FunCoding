@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="View/styles/stylehalpenggunatop10.css">
     <link rel = "stylesheet" href = "styles/stylestatistik.css">
     <link rel = "stylesheet" href = "View/styles/styleshalujian.css">
+    <link rel = "stylesheet" href = "View/styles/styleadmin.css">
     <script src="View/script/scriptfoto.js" defer></script>
    
 

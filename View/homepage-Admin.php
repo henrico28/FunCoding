@@ -1,17 +1,11 @@
-<html>
-    <head>
-        <link rel = "stylesheet" href = "styles/style.css">
-    </head>
-    <body>
-        <div class = "home">
+
+        <div class = "home-admin">
             <div>
-                <a href = ""><img src = "images/pengguna.svg"></a><br>
-                Pengguna             
+                <img class="imgAdmin" src = "View/images/pengguna.svg"><br>
+                <a href = ""><label class="descAdmin">Pengguna</label></a>             
             </div>
             <div>
-                <a href = ""><img src = "images/contract.svg"></a><br>
-                Soal
+                <img class="imgAdmin" src = "View/images/contract.svg"><br>
+                <a href = ""><label class="descAdmin">Soal</label></a>
             </div>
         </div>
-    </body>
-</html>
