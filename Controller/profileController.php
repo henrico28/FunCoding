@@ -15,7 +15,7 @@
             $res = $this->db->executeSelectQuery($data);
 
             $history = "SELECT NamaBahasa,NamaLevel,Skor FROM Ujian JOIN MasterSoal ON Ujian.IdMasterSoal = MasterSoal.IdMasterSoal
-            JOIN Bahasa ON MasterSoal.IdBahasa = Bahasa.IdBahasa JOIN Level ON MasterSoal.IdLevel = Level.IdLevel WHERE Username = '$user'";
+            JOIN Bahasa ON MasterSoal.IdBahasa = Bahasa.IdBahasa JOIN lvl ON MasterSoal.IdLevel = lvl.IdLevel WHERE Username = '$user'";
             $res2 = $this->db->executeSelectQuery($history);
 
             return View::createView('profile.php',[

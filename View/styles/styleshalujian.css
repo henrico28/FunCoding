@@ -3,15 +3,31 @@
     justify-content: center;
 }
 .flex-haluji div{
-    width: 40%;
+    width: 70%;
     height: 10px;
 }
 
-form{
-    margin-top: 30%;
+.flex-haluji form{
+    margin-top: 10%;
     box-shadow: 2px 0px 5px black;
     background-color: white;
     height: 3500%;
     overflow: auto;
     padding: 10px;
+}
+
+#btnUjian{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 100px;
+}
+
+#btnUjian:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
 }

@@ -79,7 +79,12 @@
                 require_once "Controller/fileController.php";
                 $file = new FileController();
                 echo $file->upload();
-                break;
+				break;
+			case $baseURL."/search":
+				require_once "Controller/searchController.php";
+				$search = new SearchController();
+				echo $search->search();
+				break;
 			default:
 				echo '404 not found';
 				break;

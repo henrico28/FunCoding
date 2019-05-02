@@ -43,7 +43,7 @@
 				}
 				else if($res[0][0]==3){
 					$qBahasa = "SELECT `NamaBahasa` FROM `bahasa`";
-					$qLevel = "SELECT `NamaLevel` FROM `level`";
+					$qLevel = "SELECT `NamaLevel` FROM `lvl`";
 					$resBahasa = $this->db->executeSelectQuery($qBahasa);
 					$resLevel = $this->db->executeSelectQuery($qLevel);
 					session_start();
