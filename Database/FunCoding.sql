@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 02 Bulan Mei 2019 pada 14.53
--- Versi server: 10.1.38-MariaDB
--- Versi PHP: 7.3.3
+-- Generation Time: May 02, 2019 at 04:37 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `bahasa`
+-- Table structure for table `bahasa`
 --
 
 CREATE TABLE `bahasa` (
@@ -34,7 +34,7 @@ CREATE TABLE `bahasa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `bahasa`
+-- Dumping data for table `bahasa`
 --
 
 INSERT INTO `bahasa` (`IdBahasa`, `NamaBahasa`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `bahasa` (`IdBahasa`, `NamaBahasa`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `lvl`
+-- Table structure for table `lvl`
 --
 
 CREATE TABLE `lvl` (
@@ -53,7 +53,7 @@ CREATE TABLE `lvl` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `lvl`
+-- Dumping data for table `lvl`
 --
 
 INSERT INTO `lvl` (`IdLevel`, `NamaLevel`) VALUES
@@ -64,7 +64,7 @@ INSERT INTO `lvl` (`IdLevel`, `NamaLevel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mastersoal`
+-- Table structure for table `mastersoal`
 --
 
 CREATE TABLE `mastersoal` (
@@ -74,7 +74,7 @@ CREATE TABLE `mastersoal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `mastersoal`
+-- Dumping data for table `mastersoal`
 --
 
 INSERT INTO `mastersoal` (`IdMasterSoal`, `IdBahasa`, `IdLevel`) VALUES
@@ -84,7 +84,7 @@ INSERT INTO `mastersoal` (`IdMasterSoal`, `IdBahasa`, `IdLevel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengguna`
+-- Table structure for table `pengguna`
 --
 
 CREATE TABLE `pengguna` (
@@ -93,23 +93,24 @@ CREATE TABLE `pengguna` (
   `NamaPengguna` varchar(100) NOT NULL,
   `Negara` varchar(100) NOT NULL,
   `Email` varchar(100) NOT NULL,
+  `profil` varchar(100) NOT NULL,
   `IdPosisi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `pengguna`
+-- Dumping data for table `pengguna`
 --
 
-INSERT INTO `pengguna` (`Username`, `Pass`, `NamaPengguna`, `Negara`, `Email`, `IdPosisi`) VALUES
-('harry', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Korea', 'harry@yahoo.com', 2),
-('harry2', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Indonesia', 'harxsenjaya@yahoo.com', 3),
-('Henrico', '25d55ad283aa400af464c76d713c07ad', 'Henrico Leodra', 'Indonesia', '', 3),
-('yovan', 'e10adc3949ba59abbe56e057f20f883e', 'Yovan Yovan', 'Indonesia', 'leodra28@gmail.com', 3);
+INSERT INTO `pengguna` (`Username`, `Pass`, `NamaPengguna`, `Negara`, `Email`, `profil`, `IdPosisi`) VALUES
+('harry', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Korea', 'harry@yahoo.com', '', 2),
+('harry2', 'e10adc3949ba59abbe56e057f20f883e', 'Harry', 'Indonesia', 'harxsenjaya@yahoo.com', '', 3),
+('Henrico', '25d55ad283aa400af464c76d713c07ad', 'Henrico Leodra', 'Indonesia', '', '', 3),
+('yovan', 'e10adc3949ba59abbe56e057f20f883e', 'Yovan Yovan', 'Indonesia', 'leodra28@gmail.com', '', 3);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `posisi`
+-- Table structure for table `posisi`
 --
 
 CREATE TABLE `posisi` (
@@ -118,7 +119,7 @@ CREATE TABLE `posisi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `posisi`
+-- Dumping data for table `posisi`
 --
 
 INSERT INTO `posisi` (`IdPosisi`, `NamaPosisi`) VALUES
@@ -129,7 +130,7 @@ INSERT INTO `posisi` (`IdPosisi`, `NamaPosisi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sertifikat`
+-- Table structure for table `sertifikat`
 --
 
 CREATE TABLE `sertifikat` (
@@ -141,7 +142,7 @@ CREATE TABLE `sertifikat` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `soal`
+-- Table structure for table `soal`
 --
 
 CREATE TABLE `soal` (
@@ -156,7 +157,7 @@ CREATE TABLE `soal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `soal`
+-- Dumping data for table `soal`
 --
 
 INSERT INTO `soal` (`IdSoal`, `Soal`, `A`, `B`, `C`, `D`, `JawabanSoal`, `IdMasterSoal`) VALUES
@@ -168,7 +169,7 @@ INSERT INTO `soal` (`IdSoal`, `Soal`, `A`, `B`, `C`, `D`, `JawabanSoal`, `IdMast
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ujian`
+-- Table structure for table `ujian`
 --
 
 CREATE TABLE `ujian` (
@@ -179,7 +180,7 @@ CREATE TABLE `ujian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `ujian`
+-- Dumping data for table `ujian`
 --
 
 INSERT INTO `ujian` (`IdUjian`, `Username`, `IdMasterSoal`, `Skor`) VALUES
@@ -191,7 +192,7 @@ INSERT INTO `ujian` (`IdUjian`, `Username`, `IdMasterSoal`, `Skor`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ujian-sertifikat`
+-- Table structure for table `ujian-sertifikat`
 --
 
 CREATE TABLE `ujian-sertifikat` (
@@ -202,7 +203,7 @@ CREATE TABLE `ujian-sertifikat` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ujian-soal`
+-- Table structure for table `ujian-soal`
 --
 
 CREATE TABLE `ujian-soal` (
@@ -216,19 +217,19 @@ CREATE TABLE `ujian-soal` (
 --
 
 --
--- Indeks untuk tabel `bahasa`
+-- Indexes for table `bahasa`
 --
 ALTER TABLE `bahasa`
   ADD PRIMARY KEY (`IdBahasa`);
 
 --
--- Indeks untuk tabel `lvl`
+-- Indexes for table `lvl`
 --
 ALTER TABLE `lvl`
   ADD PRIMARY KEY (`IdLevel`);
 
 --
--- Indeks untuk tabel `mastersoal`
+-- Indexes for table `mastersoal`
 --
 ALTER TABLE `mastersoal`
   ADD PRIMARY KEY (`IdMasterSoal`),
@@ -236,34 +237,34 @@ ALTER TABLE `mastersoal`
   ADD KEY `FK-Master_Level` (`IdLevel`);
 
 --
--- Indeks untuk tabel `pengguna`
+-- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`Username`),
   ADD KEY `Fk-Pengguna_Posisi` (`IdPosisi`);
 
 --
--- Indeks untuk tabel `posisi`
+-- Indexes for table `posisi`
 --
 ALTER TABLE `posisi`
   ADD PRIMARY KEY (`IdPosisi`);
 
 --
--- Indeks untuk tabel `sertifikat`
+-- Indexes for table `sertifikat`
 --
 ALTER TABLE `sertifikat`
   ADD PRIMARY KEY (`IdSertifikat`),
   ADD KEY `FK-Sertifikat_Pengguna` (`Username`);
 
 --
--- Indeks untuk tabel `soal`
+-- Indexes for table `soal`
 --
 ALTER TABLE `soal`
   ADD PRIMARY KEY (`IdSoal`),
   ADD KEY `FK-Soal_Master` (`IdMasterSoal`);
 
 --
--- Indeks untuk tabel `ujian`
+-- Indexes for table `ujian`
 --
 ALTER TABLE `ujian`
   ADD PRIMARY KEY (`IdUjian`),
@@ -271,110 +272,110 @@ ALTER TABLE `ujian`
   ADD KEY `FK-Ujian_Master` (`IdMasterSoal`);
 
 --
--- Indeks untuk tabel `ujian-sertifikat`
+-- Indexes for table `ujian-sertifikat`
 --
 ALTER TABLE `ujian-sertifikat`
   ADD KEY `FK-Ujian` (`IdUjian`),
   ADD KEY `FK-Sertifikat` (`IdSertifikat`);
 
 --
--- Indeks untuk tabel `ujian-soal`
+-- Indexes for table `ujian-soal`
 --
 ALTER TABLE `ujian-soal`
   ADD KEY `FK-IdUjian` (`IdUjian`),
   ADD KEY `FK-IdSoal` (`IdSoal`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `bahasa`
+-- AUTO_INCREMENT for table `bahasa`
 --
 ALTER TABLE `bahasa`
   MODIFY `IdBahasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `lvl`
+-- AUTO_INCREMENT for table `lvl`
 --
 ALTER TABLE `lvl`
   MODIFY `IdLevel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `mastersoal`
+-- AUTO_INCREMENT for table `mastersoal`
 --
 ALTER TABLE `mastersoal`
   MODIFY `IdMasterSoal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `posisi`
+-- AUTO_INCREMENT for table `posisi`
 --
 ALTER TABLE `posisi`
   MODIFY `IdPosisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `sertifikat`
+-- AUTO_INCREMENT for table `sertifikat`
 --
 ALTER TABLE `sertifikat`
   MODIFY `IdSertifikat` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `soal`
+-- AUTO_INCREMENT for table `soal`
 --
 ALTER TABLE `soal`
   MODIFY `IdSoal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `ujian`
+-- AUTO_INCREMENT for table `ujian`
 --
 ALTER TABLE `ujian`
   MODIFY `IdUjian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `mastersoal`
+-- Constraints for table `mastersoal`
 --
 ALTER TABLE `mastersoal`
   ADD CONSTRAINT `FK-Master_Bahasa` FOREIGN KEY (`IdBahasa`) REFERENCES `bahasa` (`IdBahasa`),
   ADD CONSTRAINT `FK-Master_Level` FOREIGN KEY (`IdLevel`) REFERENCES `lvl` (`IdLevel`);
 
 --
--- Ketidakleluasaan untuk tabel `pengguna`
+-- Constraints for table `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD CONSTRAINT `Fk-Pengguna_Posisi` FOREIGN KEY (`IdPosisi`) REFERENCES `posisi` (`IdPosisi`);
 
 --
--- Ketidakleluasaan untuk tabel `sertifikat`
+-- Constraints for table `sertifikat`
 --
 ALTER TABLE `sertifikat`
   ADD CONSTRAINT `FK-Sertifikat_Pengguna` FOREIGN KEY (`Username`) REFERENCES `pengguna` (`Username`);
 
 --
--- Ketidakleluasaan untuk tabel `soal`
+-- Constraints for table `soal`
 --
 ALTER TABLE `soal`
   ADD CONSTRAINT `FK-Soal_Master` FOREIGN KEY (`IdMasterSoal`) REFERENCES `mastersoal` (`IdMasterSoal`);
 
 --
--- Ketidakleluasaan untuk tabel `ujian`
+-- Constraints for table `ujian`
 --
 ALTER TABLE `ujian`
   ADD CONSTRAINT `FK-Ujian_Master` FOREIGN KEY (`IdMasterSoal`) REFERENCES `mastersoal` (`IdMasterSoal`),
   ADD CONSTRAINT `FK-Ujian_Pengguna` FOREIGN KEY (`Username`) REFERENCES `pengguna` (`Username`);
 
 --
--- Ketidakleluasaan untuk tabel `ujian-sertifikat`
+-- Constraints for table `ujian-sertifikat`
 --
 ALTER TABLE `ujian-sertifikat`
   ADD CONSTRAINT `FK-Sertifikat` FOREIGN KEY (`IdSertifikat`) REFERENCES `sertifikat` (`IdSertifikat`),
   ADD CONSTRAINT `FK-Ujian` FOREIGN KEY (`IdUjian`) REFERENCES `ujian` (`IdUjian`);
 
 --
--- Ketidakleluasaan untuk tabel `ujian-soal`
+-- Constraints for table `ujian-soal`
 --
 ALTER TABLE `ujian-soal`
   ADD CONSTRAINT `FK-IdSoal` FOREIGN KEY (`IdSoal`) REFERENCES `soal` (`IdSoal`),

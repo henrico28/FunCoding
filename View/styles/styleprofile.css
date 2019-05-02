@@ -19,9 +19,9 @@
 }
 
 .buttonfoto{
-    border: 2px solid #ba0101;
+    border: 2px solid black;
     border-radius: 10px;
-    background-color: #ba0101;
+    background-color: black;
     color: white;
     box-shadow: 2px 2px 2px #aaaaaa;
     font-size: 20px;
