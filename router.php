@@ -62,10 +62,10 @@
 				$result = new ResultController();
 				echo $result -> start();
 				break;
-			case $baseURL."/result":
-				require_once "Controller/ujianController.php";
-				$result = new ResultController();
-				echo $result -> start();
+			case $baseURL."/penggunaAdmin":
+				require_once "Controller/penggunaAdminController.php";
+				$penggunaAdmin = new PenggunaAdminController();
+				echo $penggunaAdmin -> start();
 				break;
 			default:
 				echo '404 not found';
