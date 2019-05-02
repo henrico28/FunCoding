@@ -69,6 +69,17 @@
 				$add = new SignupController();
 				echo $add->register();
 				break;
+			case $baseURL."/reset":
+                require_once "Controller/fileController.php";
+                $file = new FileController();
+                echo $file->reset();
+                header('Location: profile');
+                break;
+            case $baseURL."/upload":
+                require_once "Controller/fileController.php";
+                $file = new FileController();
+                echo $file->upload();
+                break;
 			default:
 				echo '404 not found';
 				break;

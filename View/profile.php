@@ -1,5 +1,19 @@
-
+      
         <div class="flex-profile">
+            <div class="foto">
+            <form action="upload" method="post" id="lblFoto" enctype="multipart/form-data">
+                <label for="profileImage">Foto Anda</label><br>
+                <?php
+                    echo "<img style=heigth:60%;width:100% src='View/styles/uploads/".$data."' id='displayPicture' onclick='trigger()'>";
+                ?>
+                <br><br>
+                <input type="file" name="upfile" id="upfile" onchange="display(this)"><br><br>
+                <input class="buttonfoto" type="submit" value="Simpan" id="simpan">
+            </form>
+            <form action="reset" id="lblFoto" method="post">
+                <input class="buttonfoto" type="submit" value="Hapus" id="hapusFoto">
+            </form>
+        </div>
             <div>
                 <h1>Profile</h1>
                 <hr>

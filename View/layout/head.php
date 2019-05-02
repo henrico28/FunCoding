@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="View/styles/stylemanager.css">
     <link rel="stylesheet" href="View/styles/stylehalpenggunatop10.css">
     <link rel = "stylesheet" href = "styles/stylestatistik.css">
+    <script src="View/script/scriptfoto.js" defer></script>
 
 </head>
 <body id="bground">

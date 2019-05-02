@@ -18,6 +18,22 @@
     color:white;
 }
 
+.buttonfoto{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    font-size: 20px;
+    width: 100px;
+}
+
+.buttonfoto:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
+}
+
 .flex-history{
     justify-content: center;
     display:flex;
@@ -47,4 +63,9 @@
     background-color:white;
     text-align: center;
     padding: 5px;
+}
+
+.fotoprof{
+    width:30px;
+    height: 30px;
 }
