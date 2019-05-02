@@ -3,7 +3,7 @@
         </div>
         <div class="flex-haluji">
             <div>           
-                <form>
+                <form method="POST" action="result">
                     <h1>Soal Ujian</h1>
                     
                     <?php

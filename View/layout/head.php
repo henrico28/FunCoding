@@ -9,7 +9,9 @@
     <link rel = "stylesheet" href = "View/styles/styleshalujian.css">
     <link rel = "stylesheet" href = "View/styles/styleadmin.css">
     <link rel = "stylesheet" href = "View/styles/styleadmin1.css">
+    <link rel="stylesheet" href="styles/styleresult.css">
     <script src="View/script/scriptfoto.js" defer></script>
+    <link rel="stylesheet" href="View/styles/styleresult.css">
 
 </head>
 <body id="bground">

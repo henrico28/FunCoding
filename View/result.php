@@ -7,12 +7,10 @@
             <div id="box">
                 <h1>RESULT</h1>
                 <hr>
-                Nama: <br>
-                Username: <br>
-                Country: <br>
-                Language: <br>
-                level: <br>
-                Score: <br>
+                Nama: <?=$nama?><br>
+                Language: <?=$bahasa?><br>
+                Level: <?=$level?><br>
+                Score: <?=$score?><br>
                 <hr>
                 <a href=""><input id="buttons" type="button" value="Ok"></a>
                 <br> 
