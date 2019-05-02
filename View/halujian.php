@@ -13,7 +13,7 @@
                         echo "<p>";
                         echo $soal[$nomorSoal-1][0];
                         echo "<br></p>";
-                        echo "<select>";
+                        echo "<select name='$nomorSoal'>";
                         for($j = 1; $j<=4; $j++){
                             echo "<option value =";
                             echo $soal[$nomorSoal-1][$j];
