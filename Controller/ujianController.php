@@ -10,8 +10,8 @@
 		public function start(){
 			$end_time = time();
 			session_start();
-			$bahasa = $_SESSION['bahasa'];
-			$level = $_SESSION['level'];
+			$bahasa = $_SESSION['language'];
+			$level = $_SESSION['lvl'];
 			$username = $_SESSION['username'];
 			$nama = $_SESSION['userlogin'];
 			$res = $_SESSION['ressoal'];
