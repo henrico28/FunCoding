@@ -32,4 +32,5 @@
 .container-update form{
     justify-content: center;
     display: flex;
+    flex-flow: column;
 }
