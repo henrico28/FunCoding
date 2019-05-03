@@ -26,7 +26,7 @@
 				$tempnegara = $this->db->escapeString($negara);
 				$tempemail = $this->db->escapeString($email);
 				$hashedPass = md5($temppw);
-				$query = "INSERT INTO pengguna (Username,Pass,NamaPengguna,Negara,Email,IdPosisi) VALUES ('$tempuser','$hashedPass','$tempname','$tempnegara','$tempemail',3)";
+				$query = "INSERT INTO pengguna (Username,Pass,NamaPengguna,Negara,Email,IdPosisi,profil) VALUES ('$tempuser','$hashedPass','$tempname','$tempnegara','$tempemail',3,'man-user.png')";
 				$this->db->executeNonSelectQuery($query);
 				header('Location: login ');
 			}
