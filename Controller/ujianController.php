@@ -24,7 +24,7 @@
 				$query = "INSERT INTO penggunaSoal (Username,IdSoal,Jawaban) VALUES ('$username','$idSoal','$temp')";
 				$this->db->executeNonSelectQuery($query);
 			}
-			$query = "SELECT COUNT(penggunaSoal.IdSoal) FROM penggunaSoal JOIN soal ON penggunaSoal.IdSoal = soal.IdSoal WHERE penggunaSoal.Jawaban = soal.JawabanSoal";
+			$query = "SELECT COUNT(penggunaSoal.IdSoal) FROM penggunaSoal JOIN soal ON penggunaSoal.IdSoal = soal.IdSoal WHERE penggunaSoal.Jawaban = soal.JawabanSoal AND penggunaSoal.username = '$username'";
 			$hasil = $this->db->executeSelectQuery($query);
 			$score = ($hasil[0][0])*10;
 			$idms = $res[0][7];
