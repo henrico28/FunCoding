@@ -4,12 +4,13 @@
                 <h1>Daftar Pengguna</h1>
                 <table>
                     <tr>
+                        <th>Username</th>
                         <th>Nama Pengguna</th>
                         <th>Asal Negara</th>
                         <th>Email</th>
                         <th>Hapus</th>
                     </tr>
-                    <?php
+                    <?php            
                         $counter = 0;
                         for ($x = 0; $x < sizeof($data); $x++) {
                             echo"<tr>";
@@ -19,7 +20,9 @@
                             $counter = $counter+1;
                             echo "<td>".$data[$x][$counter]."</td>";
                             $counter = $counter+1;
-                            echo "<td> <input type=submit value=delete> ";
+                            echo "<td>".$data[$x][$counter]."</td>";
+                            $counter = $counter+1;
+                            echo "<td> <a href='delete?id=".$data[$x][0]."'><input type='button' value=delete ></a> ";
                             $counter = 0;
                             echo "</tr>";
                         }
