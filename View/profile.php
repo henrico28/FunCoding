@@ -21,7 +21,7 @@
                 <p>Username: <?=$user?></p><br>
                 <p>Asal negara: <?=$negara?></p><br>
                 <p>Email: <?=$email?></p><br>
-                <a href="updatepass"><input class="buttonfoto" type="button" value="Change Password" style="width: 150px;"/></a>
+                <a href="updatepass"><input class="buttonfoto" type="button" value="Change Password" style="width: 200px;"/></a>
             </div>
         </div>
         <div class="flex-history">
