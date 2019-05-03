@@ -28,10 +28,12 @@ class MySQLDB{
 		$this->openConnection();
 		$query_result=$this->db_connection->query($sql);
 		$result=[];
-		if($query_result->num_rows > 0){
-			//output data of each row
-			while ($row=$query_result->fetch_row()) {
-				$result[] = $row;
+		if($query_result!=[]){
+			if($query_result->num_rows > 0){
+				//output data of each row
+				while ($row=$query_result->fetch_row()) {
+					$result[] = $row;
+				}
 			}
 		}
 		$this->closeConnection();

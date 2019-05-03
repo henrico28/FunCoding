@@ -32,7 +32,7 @@
             if($npass == $cpass){
                 $hashedNPass = md5($npass);
                 $qupdate="UPDATE pengguna SET Username = Username, Pass = '$hashedNPass', NamaPengguna = NamaPengguna, Negara = Negara, Email = Email, profil = profil, IdPosisi = IdPosisi WHERE Username = '$uname' ";
-                $this->db->executeSelectQuery($qupdate);
+                $this->db->executeNonSelectQuery($qupdate);
                 ?>
                 <script>
                     alert ("You Successfully updated your password");
@@ -45,7 +45,7 @@
 			else{
                 ?>
                 <script>
-                    alert ("You Successfully updated your password");
+                    alert ("You failed to update your password");
                 </script>
                 <?php
                 return View::createView('update.php', [
