@@ -8,6 +8,7 @@
                         echo "&nbsp;";
                     }
                 ?>
+                <br>
                 <table>
                     <tr>
                         <th>Nama Pengguna</th>
