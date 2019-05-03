@@ -8,24 +8,34 @@
 		}
 
 		public function start(){
+			$end_time = time();
 			session_start();
 			$bahasa = $_SESSION['bahasa'];
 			$level = $_SESSION['level'];
+			$username = $_SESSION['username'];
 			$nama = $_SESSION['userlogin'];
 			$res = $_SESSION['ressoal'];
+			$durasi = ($end_time - $_SESSION['start_time']);
 			session_write_close();
 			$count=0;
-			for($i=0;$i<4;$i++){
-				if($_POST[$i+1]==$res[$i][5]){
-					$count=$count+1;
-				}
+			for($i=0;$i<sizeof($res);$i++){
+				$temp = $_POST[$i+1];
+				$idSoal = $res[$i][0];
+				$query = "INSERT INTO penggunaSoal (Username,IdSoal,Jawaban) VALUES ('$username','$idSoal','$temp')";
+				$this->db->executeNonSelectQuery($query);
 			}
-			$qId = "SELECT IdMasterSoal FROM bahasa JOIN mastersoal ON mastersoal.IdBahasa = bahasa.IdBahasa JOIN lvl ON mastersoal.IdLevel = lvl.IdLevel WHERE bahasa.NamaBahasa = '$bahasa' AND lvl.NamaLevel = '$level'";
-			$idmastersoal = $this->db->executeSelectQuery($qId);
-			$score = ($count/4)*100;
-			$idms = $idmastersoal[0][0];
-			$query = "INSERT INTO ujian (Username,IdMasterSoal,Skor) VALUES ('$nama','$idms',$score)";
-			$this->db->executeNonSelectQuery($query);
+			$query = "SELECT COUNT(penggunaSoal.IdSoal) FROM penggunaSoal JOIN soal ON penggunaSoal.IdSoal = soal.IdSoal WHERE penggunaSoal.Jawaban = soal.JawabanSoal";
+			$hasil = $this->db->executeSelectQuery($query);
+			$score = ($hasil[0][0])*10;
+			$idms = $res[0][7];
+			if($score>=70){
+				$query = "INSERT INTO ujian (Username,IdMasterSoal,Skor,Hasil,Durasi) VALUES ('$username','$idms',$score,'LULUS',$durasi)";
+				$this->db->executeNonSelectQuery($query);
+			}
+			else{
+				$query = "INSERT INTO ujian (Username,IdMasterSoal,Skor,Hasil,Durasi) VALUES ('$username','$idms',$score,'TIDAK LULUS',$durasi)";
+				$this->db->executeNonSelectQuery($query);
+			}
             return View::createView('result.php',[
 				"nama"=> $nama,
 				"bahasa"=> $bahasa,

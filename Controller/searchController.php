@@ -15,7 +15,7 @@
 			$_SESSION['level'] = $level;
 			$nama = $_SESSION['userlogin'];
 			session_write_close();
-			$query = "SELECT soal, A, B, C, D, JawabanSoal FROM( SELECT IdMasterSoal FROM bahasa JOIN mastersoal ON mastersoal.IdBahasa = bahasa.IdBahasa JOIN lvl ON mastersoal.IdLevel = lvl.IdLevel WHERE bahasa.NamaBahasa = '$bahasa' AND lvl.NamaLevel = '$level' )AS himpBaru JOIN soal ON himpBaru.IdMasterSoal = soal.IdMasterSoal";
+			$query = "SELECT IdSoal, soal, A, B, C, D, JawabanSoal, Soal.IdMasterSoal FROM( SELECT IdMasterSoal FROM bahasa JOIN mastersoal ON mastersoal.IdBahasa = bahasa.IdBahasa JOIN lvl ON mastersoal.IdLevel = lvl.IdLevel WHERE bahasa.NamaBahasa = '$bahasa' AND lvl.NamaLevel = '$level' )AS himpBaru JOIN soal ON himpBaru.IdMasterSoal = soal.IdMasterSoal";
 			$resSoal = $this->db->executeSelectQuery($query);
 			session_start();
 			$_SESSION['ressoal']=$resSoal;
