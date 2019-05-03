@@ -6,6 +6,6 @@
             </div>
             <div>
                 <img class="imgAdmin" src = "View/images/contract.svg"><br>
-                <a href = ""><label class="descAdmin">Soal</label></a>
+                <a href = "soalAdmin"><label class="descAdmin">Soal</label></a>
             </div>
         </div>
