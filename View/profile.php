@@ -35,14 +35,29 @@
                         for ($x = 0; $x < sizeof($history); $x++) {
                             echo"<tr>";
                             echo "<td>".$history[$x][$counter]."</td>";
+                            $bahasa =$history[$x][$counter];
                             $counter = $counter+1;
                             echo "<td>".$history[$x][$counter]."</td>";
+                            $level =$history[$x][$counter];
                             $counter = $counter+1;
                             echo "<td>".$history[$x][$counter]."</td>";
+                            $skor =$history[$x][$counter];
                             
                             if($counter==2){
                                 if($history[$x][$counter] > 70){
-                                   
+                                    $counter1 = 0;
+                                    echo "<td>";
+                                    echo "<form action='createpdf' method='POST'>";
+                                    echo "<input type = hidden name = 'name' value='$nama'/>";
+                                    echo "<input type = hidden name ='bahasa' value='$bahasa'/>";
+                                    $counter1 = $counter1 + 1;
+                                    echo "<input type = hidden name ='level' value='$level'/>";
+                                    $counter1 = $counter1 + 1;
+                                    echo "<input type = hidden name ='skor' value='$skor'/>";
+                                    echo "<input type = 'submit'/>";
+                                    echo "</form>";
+                                    echo "</td>";
+                                    /** 
                                     echo 
                                     "<td>
                                         <form action='createpdf' method='POST'>
@@ -50,6 +65,7 @@
                                             <input type = 'submit'/>
                                         </form>
                                     </td>";
+                                    */
                                 }
                                 else{
                                     echo "<td>Anda belum lulus</td>";
