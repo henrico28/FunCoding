@@ -10,7 +10,7 @@ class deleteController{
         $this->user = $param;
     }
     public function start(){
-        $query = "DELETE FROM `pengguna` WHERE `Username` = '$user'";
+        $query = "DELETE FROM `pengguna` WHERE `Username` = '$this->user'";
         $hasil = $this->db->executeNonSelectQuery($query);
         return View::createView('hal_pengguna-admin.php',[
             "nama" => $nama,
