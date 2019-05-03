@@ -38,11 +38,29 @@
                             echo "<td>".$history[$x][$counter]."</td>";
                             $counter = $counter+1;
                             echo "<td>".$history[$x][$counter]."</td>";
+                            
+                            if($counter==2){
+                                if($history[$x][$counter] > 70){
+                                   
+                                    echo 
+                                    "<td>
+                                        <form action='createpdf' method='POST'>
+                                            <input type = hidden name = 'name' value=$nama/>
+                                            <input type = 'submit'/>
+                                        </form>
+                                    </td>";
+                                }
+                                else{
+                                    echo "<td>Anda belum lulus</td>";
+                                }
+                            }
+                            
                             $counter = 0;
+
                             echo "</tr>";
                         }
                     ?>
                 </table>
-            <!-- </div> -->
+            
             </div>
         </div>

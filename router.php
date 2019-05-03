@@ -105,6 +105,9 @@
 				$result = new ResultController();
 				echo $result -> start();
 				break;
+			case $baseURL. "/createpdf":
+				require_once "Controller/pdf/dompdf.php";
+				
 			default:
 				echo '404 not found';
 				break;
