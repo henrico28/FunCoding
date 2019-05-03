@@ -22,5 +22,14 @@
                         }
                     ?>
                 </table>
-            <div>
+            </div>
+
+            <div id="pagination">
+                <?php
+                    for ($key=0;$key<$page;$key++) {
+                        echo "<a href=?start=".($key*5).">".($key+1)."</a>";
+                        echo "&nbsp;";
+                    }
+                ?>
+            </div>
         </div>
