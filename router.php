@@ -67,6 +67,11 @@
 				$penggunaAdmin = new EditAdminController();
 				echo $penggunaAdmin -> start();
 				break;
+			case $baseURL."/updatepass":
+				require_once "Controller/updateController.php";
+				$updatepass = new UpdateController();
+				echo $updatepass -> start();
+				break;
 			case $baseURL."/delete":
 				require_once "Controller/deleteController.php";
 				$delete = new deleteController($_GET);
@@ -115,6 +120,11 @@
 				require_once "Controller/EditsoalController.php";
 				$edit = new EditsoalController();
 				echo $edit->register();
+				break;
+			case $baseURL."/update":
+				require_once "Controller/updateController.php";
+				$update = new UpdateController();
+				echo $update->update();
 				break;
 			case $baseURL."/result":
 				require_once "Controller/ujianController.php";
