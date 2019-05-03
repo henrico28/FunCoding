@@ -14,3 +14,22 @@ table, th, td {
     text-align:center;
     background-color: white;
 }
+
+#pagination {
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    color: #666;
+    border: 2px double teal;
+    padding: 8px 11px;
+    display: inline-block;
+}
+
+#pagination a:hover {
+    background-color: teal;
+    color: white;
+}
