@@ -62,6 +62,11 @@
 				$penggunaAdmin = new PenggunaAdminController();
 				echo $penggunaAdmin -> start();
 				break;
+			case $baseURL."/updatepass":
+				require_once "Controller/updateController.php";
+				$update = new UpdateController();
+				echo $update -> start();
+				break;
 			case $baseURL."/delete":
 				require_once "Controller/deleteController.php";
 				$delete = new deleteController($_GET);
@@ -111,9 +116,13 @@
 				$result = new ResultController();
 				echo $result -> start();
 				break;
+			case $baseURL."/update":
+				require_once "Controller/updateController.php";
+				$updatepass = new UpdateController();
+				echo $updatepass -> update();
+				break;
 			case $baseURL. "/createpdf":
 				require_once "Controller/pdf/dompdf.php";
-				
 			default:
 				echo '404 not found';
 				break;

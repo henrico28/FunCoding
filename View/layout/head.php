@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/styleresult.css">
     <script src="View/script/scriptfoto.js" defer></script>
     <link rel="stylesheet" href="View/styles/styleresult.css">
+    <link rel = "stylesheet" href = "View/styles/stylesupdate.css">
 
 </head>
 <body id="bground">

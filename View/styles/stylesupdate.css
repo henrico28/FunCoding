@@ -1,0 +1,35 @@
+.container-update{
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    height: 200px;
+}
+
+.txtUpdate{
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 70%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.btnUpdate{
+    border: 2px solid #ba0101;
+    border-radius: 10px;
+    background-color: #ba0101;
+    color: white;
+    box-shadow: 2px 0px 5px #aaaaaa;
+    font-size: 20px;
+    width: 180px;
+}
+
+.btnUpdate:hover{
+    color: #ba0101;
+    background-color: white;
+    border: 2px solid white;
+}
+
+.container-update form{
+    justify-content: center;
+    display: flex;
+}
