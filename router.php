@@ -62,6 +62,11 @@
 				$penggunaAdmin = new PenggunaAdminController();
 				echo $penggunaAdmin -> start();
 				break;
+			case $baseURL."/delete":
+				require_once "Controller/deleteController.php";
+				$delete = new deleteController($_GET);
+				echo $delete -> start();
+				break;
 			default:
 				echo '404 not found';
 				break;
