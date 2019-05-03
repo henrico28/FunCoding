@@ -32,7 +32,7 @@
             if($npass == $cpass){
                 $hashedNPass = md5($npass);
                 $qupdate="UPDATE pengguna SET Username = Username, Pass = '$hashedNPass', NamaPengguna = NamaPengguna, Negara = Negara, Email = Email, profil = profil, IdPosisi = IdPosisi WHERE Username = '$uname' ";
-                $this->db->executeSelectNonQuery($qupdate);
+                $this->db->executeSelectQuery($qupdate);
                 ?>
                 <script>
                     alert ("You Successfully updated your password");
