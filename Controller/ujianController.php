@@ -16,6 +16,7 @@
 			$nama = $_SESSION['userlogin'];
 			$res = $_SESSION['ressoal'];
 			$durasi = ($end_time - $_SESSION['start_time']);
+			$idmsoal = $_SESSION['idmsoal'];
 			session_write_close();
 			$count=0;
 			for($i=0;$i<sizeof($res);$i++){
@@ -24,7 +25,7 @@
 				$query = "INSERT INTO penggunaSoal (Username,IdSoal,Jawaban) VALUES ('$username','$idSoal','$temp')";
 				$this->db->executeNonSelectQuery($query);
 			}
-			$query = "SELECT COUNT(penggunaSoal.IdSoal) FROM penggunaSoal JOIN soal ON penggunaSoal.IdSoal = soal.IdSoal WHERE penggunaSoal.Jawaban = soal.JawabanSoal AND penggunaSoal.username = '$username'";
+			$query = "SELECT COUNT(penggunaSoal.IdSoal) FROM penggunaSoal JOIN soal ON penggunaSoal.IdSoal = soal.IdSoal WHERE penggunaSoal.Jawaban = soal.JawabanSoal AND penggunaSoal.username = '$username' AND soal.IdMasterSoal = $idmsoal";
 			$hasil = $this->db->executeSelectQuery($query);
 			$score = ($hasil[0][0])*10;
 			$idms = $res[0][7];

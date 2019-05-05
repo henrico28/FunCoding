@@ -25,6 +25,7 @@
 				$resSoal = $this->db->executeSelectQuery($query);
 				session_start();
 				$_SESSION['ressoal']=$resSoal;
+				$_SESSION['idmsoal']=$resSoal[0][7];
 				session_write_close();
 				return View::createView('halujian.php',[
 					"nama"=> $nama,
